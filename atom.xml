@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-02-17T15:31:34-05:00</updated>
+  <updated>2013-02-17T15:34:26-05:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -47,7 +47,7 @@ If so, clone to create a local copy of the remote repository. To clone, you need
 <p>Only include name if you want your local copy to have a different name than the remote. </br></p>
 
 <p>In some cases, you will want to fork instead of clone. Fork when you cannot contribute to the remote repository on Github.</br>
-<img src="http://mrikhter.github.com/images/Image" width="2"></br>
+<img src="http://mrikhter.github.com/images/Image2.png"></br>
 A fork will create a copy of the remote repo to your account and from there you can treat it as if you are the creator and follow the previous steps to create a local copy.</br></p>
 
 <p>The workflow after the initialization of the repository will operate in the same way.
