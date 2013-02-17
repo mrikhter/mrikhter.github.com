@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-02-17T15:36:05-05:00</updated>
+  <updated>2013-02-17T15:41:03-05:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -18,7 +18,7 @@
     <link href="http://mrikhter.github.com/blog/2013/02/17/basic-github-how-to/"/>
     <updated>2013-02-17T12:55:00-05:00</updated>
     <id>http://mrikhter.github.com/blog/2013/02/17/basic-github-how-to</id>
-    <content type="html"><![CDATA[<p>Github is an essential tool for working on multi-dev projects.
+    <content type="html"><![CDATA[<p>GitHub is a distributed version control system. It is an essential tool for working on multi-dev projects.
 Going through the prework for this program, GitHub was one of the easier subjects to grasp&#8230;or so I thought.</br>
 The first day of class would dramatically prove otherwise. Our first assignment was a deep dive into the mechanics of this collaborative tool and it was a schmess. With 28 people cloning, forking, commiting, pushing and merging I was left lost and confused.
 To be fair, the way in which we we&#8217;re working was not the most accurate depiction of a normal workflow.
@@ -26,7 +26,7 @@ In practice, it is rare to have multiple people working on the same file at the 
 In any case, I decided to create a basic workflow model to help beginners navigate their way through GitHub with a decreased fear of overwriting work by people who actually know what they&#8217;re doing. Note that in the following examples, anything in &lt;brackets> is meant to be replaced by your own info.</br></p>
 
 <p>Are you the creator of the remote repository?</br>
-If so, create a remote repository on Github:</br>
+If so, create a remote repository on GitHub:</br>
 <img src="http://mrikhter.github.com/images/Screenshot_2_17_13_12_41_PM-5.png"></p>
 
 <p>Next, create a local repository and point it to the remote repository. You need to obtain the url from the page that pops up after selecting Create repository:</br></p>
@@ -38,7 +38,7 @@ If so, create a remote repository on Github:</br>
 <p>When running this command, make sure you are in the directory you want to be in.</p>
 
 <p>Do you need access to an existing repository?</br>
-If so, clone to create a local copy of the remote repository. To clone, you need the url from github, which you can find on the repository’s page. </br></p>
+If so, clone to create a local copy of the remote repository. To clone, you need the url from GitHub, which you can find on the repository’s page. </br></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone &lt;url name&gt;</span></code></pre></td></tr></table></div></figure>
@@ -46,7 +46,7 @@ If so, clone to create a local copy of the remote repository. To clone, you need
 
 <p>Only include name if you want your local copy to have a different name than the remote. </br></p>
 
-<p>In some cases, you will want to fork instead of clone. Fork when you cannot contribute to the remote repository on Github.</br>
+<p>In some cases, you will want to fork instead of clone. Fork when you cannot contribute to the remote repository on GitHub.</br>
 <img src="http://mrikhter.github.com/images/Image2.png"></br>
 A fork will create a copy of the remote repo to your account and from there you can treat it as if you are the creator and follow the previous steps to create a local copy.</br></p>
 
@@ -71,7 +71,7 @@ If you&#8217;re planning on doing any work, whether you are working on an existi
 </span><span class='line'># This will add all files that have been changed to a tracking stage. 
 </span><span class='line'># If you only want to add specific files, just replace the . with the name of the file.
 </span><span class='line'>
-</span><span class='line'>$ git commit -am "&lt;descriptive message&gt;"
+</span><span class='line'>$ git commit -m "&lt;descriptive message&gt;"
 </span><span class='line'># This commits the staged files.</span></code></pre></td></tr></table></div></figure>
 
 
