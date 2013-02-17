@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-02-17T13:04:59-05:00</updated>
+  <updated>2013-02-17T13:20:22-05:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -18,7 +18,12 @@
     <link href="http://mrikhter.github.com/blog/2013/02/17/basic-github-how-to/"/>
     <updated>2013-02-17T12:55:00-05:00</updated>
     <id>http://mrikhter.github.com/blog/2013/02/17/basic-github-how-to</id>
-    <content type="html"><![CDATA[<p><img src = “/images/Screenshot_2_17_13_12_41_PM-5.png”></p>
+    <content type="html"><![CDATA[<p>Github is an amazing tool for working on projects
+Going through the prework, github was one of the easier subjects to grasp&#8230;or so I thought.
+The first day of class would dramatically proved otherwise. Our first assignment was a deep dive into the mechanics of this collaborative tool and it was a schmess. With 28 people cloning, forking, commiting, pushing and merging I was left lost and confused.
+To be fair, the way in which we we&#8217;re working was not the most accurate depiction of normal workflow.
+In practice, it is rare to have multiple people working on the same file at the same time.
+Thus, I decided to create a basic workflow model to help beginners navigate their way through</p>
 
 <p><img src="http://mrikhter.github.com/images/Screenshot_2_17_13_12_41_PM-5.png"></p>
 ]]></content>
