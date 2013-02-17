@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-02-17T16:32:46-05:00</updated>
+  <updated>2013-02-17T16:36:34-05:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -40,6 +40,8 @@ If so, create a remote repository on GitHub:</br>
 </span><span class='line'>$ git init
 </span><span class='line'>$ git remote add origin &lt;url&gt;</span></code></pre></td></tr></table></div></figure>
 
+
+<p>Note that you can point an existing directory to the remote repo by skipping the first two steps. Just make sure you are the desired directory when running the commands!</br></p>
 
 <p>Do you need a copy of an existing repository?</br>
 If so, clone to create a local copy of the remote repository. To clone, you need the url from GitHub, which you can find on the repository’s page. </br></p>
