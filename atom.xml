@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-02-17T14:31:11-05:00</updated>
+  <updated>2013-02-17T14:32:06-05:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -34,11 +34,13 @@ If so, create a remote repository on Github:</br>
 When running this command, make sure you are in the directory you want to be in.</p>
 
 <p>Do you need access to an existing repository?</br>
-If so, clone to create a local copy of the remote repository. To clone, you need the url from github, which you can find on the repository’s page. </br>
-&#8221;&#8217;
-$ git clone <em>url name</em> </br>
-&#8221;&#8217;
-Only include name if you want your local copy to have a different name than the remote. </br></p>
+If so, clone to create a local copy of the remote repository. To clone, you need the url from github, which you can find on the repository’s page. </br></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone &lt;em&gt;url name&lt;/em&gt; &lt;/br&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Only include name if you want your local copy to have a different name than the remote. </br></p>
 
 <p>In some cases, you will want to fork instead of clone. Fork when you cannot contribute to the remote repository on Github.</br>
   INSERT PHOTO OF FORK HERE</br>
