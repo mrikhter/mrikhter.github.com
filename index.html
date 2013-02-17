@@ -98,8 +98,8 @@ Going through the prework for this program &hellip;">
 Going through the prework for this program, GitHub was one of the easier subjects to grasp&#8230;or so I thought.</br>
 The first day of class would dramatically prove otherwise. Our first assignment included a deep dive into the mechanics of this collaborative tool and it was a schmess. With 28 people cloning, forking, commiting, pushing and merging I was left lost and bewildered.
 To be fair, the way in which we we&#8217;re working was not the most accurate depiction of a normal workflow.
-In practice, it is rare to have multiple people working on the same file at the same time.</br>
-In any case, I decided to create a basic workflow model to help beginners like myself navigate their way through GitHub with a decreased fear of overwriting work by people who actually know what they&#8217;re doing. Note that in the following examples, anything in &lt;brackets> is meant to be replaced by your own info.</br></p>
+In practice, it&#8217;s rare to have multiple people working on the same file at the same time.</br>
+In any case, I decided to create a basic workflow model to help beginners like myself navigate their way through GitHub with a decreased fear of overwriting work by people who actually know what they&#8217;re doing. Note that in the following examples, anything in &lt;brackets> is meant to be replaced with your own info.</br></p>
 
 <p>Are you the creator of the remote repository?</br>
 If so, create a remote repository on GitHub:</br>
@@ -130,7 +130,7 @@ If so, clone to create a local copy of the remote repository. To clone, you need
 
 <p>In some cases, you will want to fork instead of clone. Fork when you cannot contribute to the remote repository on GitHub.</br>
 <img src="/images/Image2.png"></br>
-A fork will create a copy of the remote repo to your account and from there follow the previous cloning steps.</br></p>
+A fork will create a copy of the remote repo to your account and from there follow the previous cloning step.</br></p>
 
 <p>The workflow after the initialization of the repository will operate in the same way.
 If you&#8217;re planning on doing any work, whether you are working on an existing file or creating new files, you&#8217;ll want to create a branch. This will copy the contents of the master (local) repository. Do all of your work on separate branches.</p>
@@ -162,12 +162,8 @@ Get back to your master branch and update your copy with the most recent copy fr
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git checkout master
-</span><span class='line'>$ git pull 
-</span><span class='line'># you can use git pull when you've set up your .gitconfig file 
-</span><span class='line'># to pull/push from your current location.</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>$ git pull </span></code></pre></td></tr></table></div></figure>
 
 
 <p>Good, so now your copy of the master branch is up-to-date, you shouldn&#8217;t have any issues here since you did your work in a separate branch. The next steps will tell you if you&#8217;re changes are compatible with the changes made to the master.</br>
@@ -177,7 +173,7 @@ First, switch to your branch:</p>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git checkout &lt;your-branch-name&gt;</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Next, rebase to update your branch with the changes from the master remote repo from which you just pulled. A rebase takes the changes that you have commited, sets them aside, then it takes all the changes from the master branch, and puts them on your branch, THEN it takes your changes and puts them back on top of that. If there is a conflict, it will provide you with instructions on how to fix it, although to be fair these instructions are indiscernible to me thus far.</p>
+<p>Next, rebase to update your branch with the changes from the master remote repo from which you just pulled. A rebase takes the changes that you have commited, sets them aside, then it takes all the changes from the master branch, and puts them on your branch, THEN it takes your changes and puts them back on top of that. If there is a conflict, it will provide you with instructions on how to fix it, although to be fair these instructions are indiscernible to me thus far. There are a couple other options but we&#8217;ll stick with this one for now as it keeps the commits history linear.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git rebase master</span></code></pre></td></tr></table></div></figure>
