@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-02-17T15:42:34-05:00</updated>
+  <updated>2013-02-17T16:29:59-05:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -29,15 +29,19 @@ In any case, I decided to create a basic workflow model to help beginners like m
 If so, create a remote repository on GitHub:</br>
 <img src="http://mrikhter.github.com/images/Screenshot_2_17_13_12_41_PM-5.png"></p>
 
-<p>Next, create a local repository and point it to the remote repository. You need to obtain the url from the page that pops up after selecting Create repository:</br></p>
+<p>Next, you need to create a directory for your project, inialize it with the necessary git files and and point it to the remote repository. You&#8217;ll need to obtain the url from the page that pops up after selecting create repository:</br></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git remote add &lt;url name&gt;</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ mkdir &lt;directory&gt;
+</span><span class='line'>$ cd &lt;directory&gt;
+</span><span class='line'>$ git init
+</span><span class='line'>$ git remote add origin &lt;url&gt;</span></code></pre></td></tr></table></div></figure>
 
 
-<p>When running this command, make sure you are in the directory you want to be in.</p>
-
-<p>Do you need access to an existing repository?</br>
+<p>Do you need a copy of an existing repository?</br>
 If so, clone to create a local copy of the remote repository. To clone, you need the url from GitHub, which you can find on the repository’s page. </br></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -48,7 +52,7 @@ If so, clone to create a local copy of the remote repository. To clone, you need
 
 <p>In some cases, you will want to fork instead of clone. Fork when you cannot contribute to the remote repository on GitHub.</br>
 <img src="http://mrikhter.github.com/images/Image2.png"></br>
-A fork will create a copy of the remote repo to your account and from there you can treat it as if you are the creator and follow the previous steps to create a local copy.</br></p>
+A fork will create a copy of the remote repo to your account and from there follow the previous cloning steps.</br></p>
 
 <p>The workflow after the initialization of the repository will operate in the same way.
 If you&#8217;re planning on doing any work, whether you are working on an existing file or creating new files, you&#8217;ll want to create a branch. This will copy the contents of the master (local) repository. Do all of your work on separate branches.</p>
