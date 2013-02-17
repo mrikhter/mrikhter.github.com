@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-02-12T08:58:44-05:00</updated>
+  <updated>2013-02-17T12:57:51-05:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[basic-github-how-to]]></title>
+    <link href="http://mrikhter.github.com/blog/2013/02/17/basic-github-how-to/"/>
+    <updated>2013-02-17T12:55:00-05:00</updated>
+    <id>http://mrikhter.github.com/blog/2013/02/17/basic-github-how-to</id>
+    <content type="html"><![CDATA[<p><img src = “/Screenshot_2_17_13_12_41_PM.jpeg” alt=”github repo creation.”></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Top 4 Motivations for Taking the Leap to Code]]></title>
