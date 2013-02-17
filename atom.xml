@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-02-17T14:33:59-05:00</updated>
+  <updated>2013-02-17T15:19:26-05:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -19,11 +19,11 @@
     <updated>2013-02-17T12:55:00-05:00</updated>
     <id>http://mrikhter.github.com/blog/2013/02/17/basic-github-how-to</id>
     <content type="html"><![CDATA[<p>Github is an essential tool for working on multi-dev projects.
-Going through the prework for this program, github was one of the easier subjects to grasp&#8230;or so I thought.
+Going through the prework for this program, GitHub was one of the easier subjects to grasp&#8230;or so I thought.
 The first day of class would dramatically prove otherwise. Our first assignment was a deep dive into the mechanics of this collaborative tool and it was a schmess. With 28 people cloning, forking, commiting, pushing and merging I was left lost and confused.
-To be fair, the way in which we we&#8217;re working was not the most accurate depiction of normal workflow.
+To be fair, the way in which we we&#8217;re working was not the most accurate depiction of a normal workflow.
 In practice, it is rare to have multiple people working on the same file at the same time.
-Thus, I decided to create a basic workflow model to help beginners navigate their way through github with a decreased fear of overwriting work by people who actually know what they&#8217;re doing.</br></p>
+In any case, I decided to create a basic workflow model to help beginners navigate their way through github with a decreased fear of overwriting work by people who actually know what they&#8217;re doing. Note that in the following examples, anything in &lt;brackets>\ is meant to be replaced by your own info.</br></p>
 
 <p>Are you the creator of the remote repository?</br>
 If so, create a remote repository on Github:</br>
@@ -32,7 +32,7 @@ If so, create a remote repository on Github:</br>
 <p>Next, create a local repository and point it to the remote repository. You need to obtain the url from the page that pops up after selecting Create repository:</br></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git remote add &lt;em&gt;url&lt;/em&gt;</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git remote add &lt;url name&gt;</span></code></pre></td></tr></table></div></figure>
 
 
 <p>When running this command, make sure you are in the directory you want to be in.</p>
@@ -41,7 +41,7 @@ If so, create a remote repository on Github:</br>
 If so, clone to create a local copy of the remote repository. To clone, you need the url from github, which you can find on the repository’s page. </br></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone &lt;em&gt;url name&lt;/em&gt;</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone &lt;url name&gt;</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Only include name if you want your local copy to have a different name than the remote. </br></p>
@@ -49,6 +49,65 @@ If so, clone to create a local copy of the remote repository. To clone, you need
 <p>In some cases, you will want to fork instead of clone. Fork when you cannot contribute to the remote repository on Github.</br>
   INSERT PHOTO OF FORK HERE</br>
 A fork will create a copy of the remote repo to your account and from there you can treat it as if you are the creator and follow the previous steps to create a local copy.</br></p>
+
+<p>The workflow after the initialization of the repository will operate in the same way.
+If you&#8217;re planning on doing any work, whether you are working on an existing file or creating new files, you&#8217;ll want to create a branch. This will copy the contents of the master (local) repository. Do all of your work on separate branches.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git checkout -b &lt;your-branch-name&gt;
+</span><span class='line'># this creates a new branch and switches you into it</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Let&#8217;s pretend you&#8217;ve accomplished something you&#8217;d like to share. You need to add, commit and eventually push this file up to the remote repository for all the world to see.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git add .
+</span><span class='line'># This will add all files that have been changed to a tracking stage. If you only want to add specific files, just replace the . with the name of the file.
+</span><span class='line'>
+</span><span class='line'>$ git commit -am "&lt;descriptive message&gt;"
+</span><span class='line'># This commits the staged files, WRITE SOMETHING ELSE HERE.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The next few steps are where the confusion and anxiety ensues. The thing is, there&#8217;s a pretty good chance that while you were working, someone else was working too, maybe on the same file you were working on, maybe not. The point is you don&#8217;t know, and you need to find out.</br>
+Get back to your master branch and update your copy with the most recent copy from the remote repo:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git checkout master
+</span><span class='line'>$ git pull 
+</span><span class='line'># you can use git pull when you've set up your .gitconfig file to pull/push from whatever location you are in.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Good, so now your copy of the master branch is up-to-date, you shouldn&#8217;t have any issues here since you did your work in a separate branch. The next steps will tell you if you&#8217;re changes are compatible with the changes made to the master.</br>
+First, switch to your branch:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git checkout &lt;your-branch-name&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next, rebase to update your branch with the changes from the master remote repo from which you just pulled. A rebase takes the changes that you have commited, sets them aside, then it takes all the changes from the master branch, and puts them on your branch, THEN it takes your changes and puts them back on top of that. If there is a conflict, it will provide you with instructions on how to fix it, although to be fair these instructions are indiscernible to me thus far.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git rebase master</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Cross your fingers that there are no conflicts, solve them if there are (ok, maybe easier said than done) and then merge your branch with the master local and push it to the repo:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git checkout master
+</span><span class='line'>$ git merge &lt;your-branch-name&gt;
+</span><span class='line'>$ git push</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Tada! We are all on our way to becoming productive members of GitHub and society at-large.</p>
 ]]></content>
   </entry>
   
