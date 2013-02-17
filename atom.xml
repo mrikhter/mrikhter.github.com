@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-02-17T15:23:11-05:00</updated>
+  <updated>2013-02-17T15:26:18-05:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[basic-github-how-to]]></title>
+    <title type="html"><![CDATA[GitHub: Basic How-to's]]></title>
     <link href="http://mrikhter.github.com/blog/2013/02/17/basic-github-how-to/"/>
     <updated>2013-02-17T12:55:00-05:00</updated>
     <id>http://mrikhter.github.com/blog/2013/02/17/basic-github-how-to</id>
@@ -85,7 +85,7 @@ Get back to your master branch and update your copy with the most recent copy fr
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git checkout master
 </span><span class='line'>$ git pull 
 </span><span class='line'># you can use git pull when you've set up your .gitconfig file 
-</span><span class='line'># to pull/push from whatever location you are in.</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'># to pull/push from your current location.</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Good, so now your copy of the master branch is up-to-date, you shouldn&#8217;t have any issues here since you did your work in a separate branch. The next steps will tell you if you&#8217;re changes are compatible with the changes made to the master.</br>
