@@ -99,7 +99,7 @@ Going through the prework for this program, GitHub was one of the easier subject
 The first day of class would dramatically prove otherwise. Our first assignment was a deep dive into the mechanics of this collaborative tool and it was a schmess. With 28 people cloning, forking, commiting, pushing and merging I was left lost and confused.
 To be fair, the way in which we we&#8217;re working was not the most accurate depiction of a normal workflow.
 In practice, it is rare to have multiple people working on the same file at the same time.
-In any case, I decided to create a basic workflow model to help beginners navigate their way through github with a decreased fear of overwriting work by people who actually know what they&#8217;re doing. Note that in the following examples, anything in &lt;brackets>\ is meant to be replaced by your own info.</br></p>
+In any case, I decided to create a basic workflow model to help beginners navigate their way through github with a decreased fear of overwriting work by people who actually know what they&#8217;re doing. Note that in the following examples, anything in <brackets> is meant to be replaced by your own info.</br></p>
 
 <p>Are you the creator of the remote repository?</br>
 If so, create a remote repository on Github:</br>
@@ -142,11 +142,13 @@ If you&#8217;re planning on doing any work, whether you are working on an existi
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
+<span class='line-number'>6</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git add .
-</span><span class='line'># This will add all files that have been changed to a tracking stage. If you only want to add specific files, just replace the . with the name of the file.
+</span><span class='line'># This will add all files that have been changed to a tracking stage. 
+</span><span class='line'># If you only want to add specific files, just replace the . with the name of the file.
 </span><span class='line'>
 </span><span class='line'>$ git commit -am "&lt;descriptive message&gt;"
-</span><span class='line'># This commits the staged files, WRITE SOMETHING ELSE HERE.</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'># This commits the staged files.</span></code></pre></td></tr></table></div></figure>
 
 
 <p>The next few steps are where the confusion and anxiety ensues. The thing is, there&#8217;s a pretty good chance that while you were working, someone else was working too, maybe on the same file you were working on, maybe not. The point is you don&#8217;t know, and you need to find out.</br>
@@ -155,9 +157,11 @@ Get back to your master branch and update your copy with the most recent copy fr
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
+<span class='line-number'>4</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git checkout master
 </span><span class='line'>$ git pull 
-</span><span class='line'># you can use git pull when you've set up your .gitconfig file to pull/push from whatever location you are in.</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'># you can use git pull when you've set up your .gitconfig file 
+</span><span class='line'># to pull/push from whatever location you are in.</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Good, so now your copy of the master branch is up-to-date, you shouldn&#8217;t have any issues here since you did your work in a separate branch. The next steps will tell you if you&#8217;re changes are compatible with the changes made to the master.</br>
@@ -183,7 +187,7 @@ First, switch to your branch:</p>
 </span><span class='line'>$ git push</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Tada! We are all on our way to becoming productive members of GitHub and society at-large.</p>
+<p>Tada! We&#8217;re all on our way to becoming productive members of GitHub and society at-large.</p>
 </div>
   
   
