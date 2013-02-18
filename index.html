@@ -173,7 +173,7 @@ First, switch to your branch:</p>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git checkout &lt;your-branch-name&gt;</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Next, rebase to update your branch with the changes from the master remote repo from which you just pulled. A rebase takes the changes that you have commited, sets them aside, then it takes all the changes from the master branch, and puts them on your branch, THEN it takes your changes and puts them back on top of that. If there is a conflict, it will provide you with instructions on how to fix it, although to be fair these instructions are indiscernible to me thus far. There are a couple other options but we&#8217;ll stick with this one for now as it keeps the commits history linear.</p>
+<p>Next, rebase to update your branch with the changes from the master remote repo from which you just pulled. A rebase takes the changes that you have commited, sets them aside, then it takes all the changes from the master branch, and puts them on your branch, THEN it takes your changes and puts them back on top of that. If there is a conflict, it will provide you with instructions on how to fix it, although to be fair these instructions are indiscernible to me thus far. There are a couple other options but we&#8217;ll stick with this one for now as it keeps the commits history linear. Reserve rebase for your local repository since this command rewrites the commit history.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git rebase master</span></code></pre></td></tr></table></div></figure>
