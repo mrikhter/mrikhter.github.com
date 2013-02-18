@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-02-17T17:14:42-05:00</updated>
+  <updated>2013-02-18T16:23:17-05:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -19,17 +19,17 @@
     <updated>2013-02-17T12:55:00-05:00</updated>
     <id>http://mrikhter.github.com/blog/2013/02/17/basic-github-how-to</id>
     <content type="html"><![CDATA[<p>GitHub, a distributed version control system, is an essential tool for working on multi-dev projects.
-Going through the prework for this program, GitHub was one of the easier subjects to grasp&#8230;or so I thought.</br>
-The first day of class would dramatically prove otherwise. Our first assignment included a deep dive into the mechanics of this collaborative tool and it was a schmess. With 28 people cloning, forking, commiting, pushing and merging I was left lost and bewildered.
-To be fair, the way in which we we&#8217;re working was not the most accurate depiction of a normal workflow.
-In practice, it&#8217;s rare to have multiple people working on the same file at the same time.</br>
+In going through the prework for this program, GitHub was one of the easier subjects to grasp&#8230;or so I thought. The first day of class would dramatically prove otherwise.</br></br>
+Our first assignment included a deep dive into the mechanics of this collaborative tool, and it was a schmess. With 28 people cloning, forking, commiting, pushing and merging, I was left lost and bewildered.
+To be fair, the way in which we were working was not the most accurate depiction of a normal workflow.
+In practice, it&#8217;s rare to have multiple people working on the same file at the same time.</br></br>
 In any case, I decided to create a basic workflow model to help beginners like myself navigate their way through GitHub with a decreased fear of overwriting work by people who actually know what they&#8217;re doing. Note that in the following examples, anything in &lt;brackets> is meant to be replaced with your own info.</br></p>
 
 <p>Are you the creator of the remote repository?</br>
 If so, create a remote repository on GitHub:</br>
 <img src="http://mrikhter.github.com/images/Screenshot_2_17_13_12_41_PM-5.png"></p>
 
-<p>Next, you need to create a directory for your project, initialize it with the necessary git files and and point it to the remote repository. You&#8217;ll need to obtain the url from the page that pops up after selecting create repository:</br></p>
+<p>Next, you need to create a directory for your project, initialize it with the necessary git files and point it to the remote repository. You&#8217;ll need to obtain the url from the page that pops up after selecting &#8220;create repository&#8221;:</br></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -41,20 +41,20 @@ If so, create a remote repository on GitHub:</br>
 </span><span class='line'>$ git remote add origin &lt;url&gt;</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Note that you can point an existing directory to the remote repo by skipping the first two steps. Just make sure you are the desired directory when running the commands!</br></p>
+<p>Note that you can point an existing directory to the remote repo by skipping the first two steps. Just make sure you are in the desired directory when running the commands!</br></p>
 
 <p>Do you need a copy of an existing repository?</br>
-If so, clone to create a local copy of the remote repository. To clone, you need the url from GitHub, which you can find on the repository’s page. </br></p>
+If so, use the clone command to create a local copy of the remote repository. To clone, you need the url from GitHub, which you can find on the repository’s page. </br></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone &lt;url name&gt;</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone &lt;url&gt; &lt;name&gt;</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Only include name if you want your local copy to have a different name than the remote. </br></p>
 
-<p>In some cases, you will want to fork instead of clone. Fork when you cannot contribute to the remote repository on GitHub.</br>
+<p>In some cases, you will want to fork instead of clone. You&#8217;ll want to use the fork command when you cannot contribute to the remote repository on GitHub.</br>
 <img src="http://mrikhter.github.com/images/Image2.png"></br>
-A fork will create a copy of the remote repo to your account and from there follow the previous cloning step.</br></p>
+A fork will create a copy of the remote repo to your account. From there, follow the previous cloning step.</br></p>
 
 <p>The workflow after the initialization of the repository will operate in the same way.
 If you&#8217;re planning on doing any work, whether you are working on an existing file or creating new files, you&#8217;ll want to create a branch. This will copy the contents of the master (local) repository. Do all of your work on separate branches.</p>
@@ -90,7 +90,7 @@ Get back to your master branch and update your copy with the most recent copy fr
 </span><span class='line'>$ git pull </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Good, so now your copy of the master branch is up-to-date. You shouldn&#8217;t have any issues here since you did your work in a separate branch. Pulling actually accomplishes two things - fetching the files and merging them onto your master branch. Techincally we could have used git fetch and git merge, but again since your work was done on a separate branch we aren&#8217;t terribly concerned with other peoples changes yet. The next steps will tell you if you&#8217;re changes are compatible with the changes made to the master.</br>
+<p>Good, so now your copy of the master branch is up-to-date. You shouldn&#8217;t have any issues here since you did your work in a separate branch. Pulling actually accomplishes two things - fetching the files and merging them onto your master branch. Technically we could have used git fetch and git merge, but again since your work was done on a separate branch we aren&#8217;t terribly concerned with other peoples changes yet. The next steps will tell you if your changes are compatible with the changes made to the master.</br>
 First, switch to your branch:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
