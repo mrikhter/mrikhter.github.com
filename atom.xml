@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-02-18T21:55:23-05:00</updated>
+  <updated>2013-02-18T22:04:35-05:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -30,7 +30,8 @@ If so, create a remote repository on GitHub:</br>
 <img src="http://mrikhter.github.com/images/image3.jpg">
 <img src="http://mrikhter.github.com/images/Screenshot_2_17_13_12_41_PM-5.png"></p>
 
-<p>Next, you need to create a directory for your project, initialize it with the necessary git files and point it to the remote repository. You&#8217;ll need to obtain the url from the page that pops up after selecting &#8220;create repository&#8221;:</br></p>
+<p>Next, you need to create a directory for your project, initialize it with the necessary git files and point it to the remote repository. You&#8217;ll need to obtain the url from the page that pops up after selecting &#8220;create repository&#8221;:</br>
+<img src="http://mrikhter.github.com/images/image4.png"></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
