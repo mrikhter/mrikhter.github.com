@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-03-05T09:26:56-05:00</updated>
+  <updated>2013-03-05T09:32:24-05:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -117,7 +117,7 @@ I created a controller.rb file and two forms, get_form.erb and post_form.erb.</p
 </span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
 
 
-<p>When using get as the form method, the form needs to be directed to another URL in order to have access to the inputted data. This is accomplished by specifying a different URL in the form action. Also when using get as the form method, the</p>
+<p>When using get as the form method, the form needs to be directed to another URL in order to have access to the inputted data. This is accomplished by specifying a different URL in the form action. Also, the data can displayed using the get method in the controller at the new url.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
