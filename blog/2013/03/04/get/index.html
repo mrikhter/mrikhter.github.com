@@ -189,7 +189,7 @@ I created a controller.rb file and two forms, get_form.erb and post_form.erb.</p
 </span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
 
 
-<p>When using get as the form method, the form needs to be directed to another URL in order to have access to the inputted data. This is accomplished by specifying a different URL in the form action. Also, the data can displayed using the get method in the controller at the new url.</p>
+<p>When using get as the form method, the form needs to be directed to another URL in order to have access to the inputted data. This is accomplished by specifying a different URL in the form action. Also, the data can accessed using the get method in the controller at the new url.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -205,8 +205,12 @@ I created a controller.rb file and two forms, get_form.erb and post_form.erb.</p
 </span><span class='line'>&lt;/form&gt;</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="/images/get-1.png"><br>
+<p><img src="/images/get-1.png"><br></p>
+
+<p>Note that after submitting the form, the inputted data is visible in the URL.
 <img src="/images/get-2.png"></p>
+
+<p>When using post as the form method, the form does not need to be directed to another URL in order to have access to the inputted data. Also, the data can be accessed using the post method in the controller at the same.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
