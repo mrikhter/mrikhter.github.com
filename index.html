@@ -95,7 +95,7 @@
 
   <div class="entry-content"><p>I&#8217;ll be the first to admit that I wouldn&#8217;t consider myself particularly adept in the interworkings of computers&#8230;or really technology in general. Prior to starting this program, EXAMPLE. Nevertheless, I am on a mission (well me and the school) to educate myself on all things TECH.</p>
 
-<p>Most of the time, I&#8217;ll learn about something at a high level and it seems to make perfect sense. In practice, that&#8217;s rarely the case. One such subject came in the form of HTTP requests (pun intended). In the process of buiding our first app (check it out: <a href="http://www.octomaps.com">Octomaps</a>) I was able to dig deeper into the communication channel between client, server and an application. Allow me to explain.</p>
+<p>Most of the time, I&#8217;ll learn about something at a high level and it seems to make perfect sense. In practice, that&#8217;s rarely the case. One such subject came in the form of HTTP requests (pun intended). In the process of buiding our first app (check it out: <a href="http://www.octomaps.com">Octomaps</a>) I was able to dig deeper into the communication channel between client, server and application. Allow me to explain.</p>
 
 <p>When a user enters a URL into a browser (the client), the client sends a request to the server hosting that website. The server then needs to process that request using the application, and return the appropriate response to the browser. That&#8217;s the simple explanation.</p>
 
@@ -149,7 +149,74 @@ I knew what my basic setup was supposed to look like in Sinatra, but I wasn&#821
 <li>Form submissions cannot be bookmarked</li></ul>
 
 
+<p>I proceeded to experiment with the methods to obtain a clearer understanding of their function.
+I created a controller.rb file and two forms, get_form.erb and post_form.erb.</p>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>controller.rb
+</span><span class='line'>require 'sinatra'
+</span><span class='line'>require 'sinatra/reloader'
+</span><span class='line'>
+</span><span class='line'>get '/get' do
+</span><span class='line'>  erb :get_form
+</span><span class='line'>end
+</span><span class='line'>
+</span><span class='line'>get '/get/new' do
+</span><span class='line'>  "You entered #{params[:fname]} #{params[:lname]}"
+</span><span class='line'>end
+</span><span class='line'>
+</span><span class='line'>get '/post' do
+</span><span class='line'>  erb :post_form
+</span><span class='line'>end
+</span><span class='line'>
+</span><span class='line'>post '/post' do
+</span><span class='line'>  "You entered #{params[:fname]} #{params[:lname]}"
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>get_form.erb
+</span><span class='line'>&lt;form action="/get/new" method="get"&gt;
+</span><span class='line'>  First name: &lt;input type="text" name="fname"&gt;&lt;br&gt;
+</span><span class='line'>  Last name: &lt;input type="text" name="lname"&gt;&lt;br&gt;
+</span><span class='line'>  &lt;input type="submit" value="Submit"&gt;
+</span><span class='line'>&lt;/form&gt;```
+</span><span class='line'>
+</span><span class='line'>post_form.erb</span></code></pre></td></tr></table></div></figure>
+
+
+<p><form action="/post" method="post">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit">
+</form>&#8220;`</p>
 </div>
   
   
