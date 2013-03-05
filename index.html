@@ -95,12 +95,12 @@
 
   <div class="entry-content"><p>I&#8217;ll be the first to admit that I wouldn&#8217;t consider myself particularly adept in the interworkings of computers&#8230;or really technology in general. Prior to starting this program, EXAMPLE. Nevertheless, I am on a mission (well me and the school) to educate myself on all things TECH.</p>
 
-<p>Most of the time, I&#8217;ll learn about something at a high level and it seems to make perfect sense. In practice, that&#8217;s rarely the case. One such subject came in form of HTTP requests (pun intended). In the process of buiding our first app (check it out: www.octomaps.com) I was able to dig deeper into the communication between client, server and an application. Allow me to explain.</p>
+<p>Most of the time, I&#8217;ll learn about something at a high level and it seems to make perfect sense. In practice, that&#8217;s rarely the case. One such subject came in form of HTTP requests (pun intended). In the process of buiding our first app (check it out: <a href="www.octomaps.com">Octomaps</a> I was able to dig deeper into the communication between client, server and an application. Allow me to explain.</p>
 
 <p>When a user enters a URL into a browser (the client), the client sends a request to the server hosting that website. The server then needs to process that request, and return the appropriate response to the browser. That&#8217;s the simple explanation.</p>
 
-<p>To expand, hypertext transfer protocol (HTTP), functions as the communicator between the client and the server. A specific request method is sent from the client to the server indicating the desired action to be performed on the resource of the application. I&#8217;ll focus on just the two most commonly used methods in this post: GET and POST.
-  The GET method, requests the retrieval of a resource or information.
+<p>To expand, hypertext transfer protocol (HTTP), functions as the communicator between the client and the server. A specific request method is sent from the client to the server indicating the desired action to be performed on the resource of the application. I&#8217;ll focus on just the two most commonly used methods in this post: GET and POST.<br>
+  The GET method, requests the retrieval of a resource or information.<br>
   The POST method, requests that the server accept the data enclosed as a new subordinate of the web resource. This data will typically be processed by the application.</p>
 
 <p>Ok, great. So now we&#8217;ve got a general understanding of the GET and POST methods, but now what? Where do they go and how do we use them? That&#8217;s exactly where I stood a few days ago. My problem was two-fold. First of all, I needed to understand the interaction betwee the client-server-application. Then, I needed to wrap my head around creating/sending a form to the client to fill out and then using the inputs in my application. We&#8217;ll go through one at a time.</p>
@@ -113,9 +113,9 @@ A user requests to go to the url: 0.0.0.0:9292
 The browser sends an HTTP request to 0.0.0.0:9292: GET / HTTP/1.1</p>
 
 <p>This indicates:
-THe GET method indicates that the server is supposed to return a resource.
-The requested URI of &#8216;/&#8217;, which is the root
-The HTTP protocol version (irrelevant for us here)</p>
+1) The GET method indicates that the server is supposed to return a resource.
+2) The requested URI of &#8216;/&#8217;, which is the root
+3) The HTTP protocol version (irrelevant for us here)</p>
 
 <p>PROCESS REQUEST:
 The server looks at our controller.rb file for instructions.
@@ -125,7 +125,10 @@ Searches for a get method which matches the specific url and executes the procee
 The server responds with
 200 1709 0.0539????</p>
 
-<p>A three-digit numeric status code. 200 means OK. Check out other <a href="https://developer.mozilla.org/en-US/docs/HTTP/HTTP_response_codes">response codes</a>.</p>
+<p>This indicates:
+1) A three-digit numeric status code. 200 means OK. Check out other <a href="https://developer.mozilla.org/en-US/docs/HTTP/HTTP_response_codes">response codes</a>.
+2) ?
+3) Request processing time</p>
 
 <p> Well in order for the server to interact with the application and respond to the client, we need to specify the</p>
 
