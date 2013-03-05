@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-03-04T23:53:22-05:00</updated>
+  <updated>2013-03-04T23:54:09-05:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -20,7 +20,7 @@
     <id>http://mrikhter.github.com/blog/2013/03/04/get</id>
     <content type="html"><![CDATA[<p>I&#8217;ll be the first to admit that I wouldn&#8217;t consider myself particularly adept in the interworkings of computers&#8230;or really technology in general. Prior to starting this program, EXAMPLE. Nevertheless, I am on a mission (well me and the school) to educate myself on all things TECH.</p>
 
-<p>Most of the time, I&#8217;ll learn about something at a high level and it seems to make perfect sense. In practice, that&#8217;s rarely the case. One such subject came in form of HTTP requests (pun intended). In the process of buiding our first app (check it out: <a href="www.octomaps.com">Octomaps</a>) I was able to dig deeper into the communication between client, server and an application. Allow me to explain.</p>
+<p>Most of the time, I&#8217;ll learn about something at a high level and it seems to make perfect sense. In practice, that&#8217;s rarely the case. One such subject came in form of HTTP requests (pun intended). In the process of buiding our first app (check it out: <a href="http://www.octomaps.com">Octomaps</a>) I was able to dig deeper into the communication between client, server and an application. Allow me to explain.</p>
 
 <p>When a user enters a URL into a browser (the client), the client sends a request to the server hosting that website. The server then needs to process that request, and return the appropriate response to the browser. That&#8217;s the simple explanation.</p>
 
