@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-03-05T09:11:20-05:00</updated>
+  <updated>2013-03-05T09:12:21-05:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -125,23 +125,31 @@ I created a controller.rb file and two forms, get_form.erb and post_form.erb.</p
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>get_form.erb
 </span><span class='line'>&lt;form action="/get/new" method="get"&gt;
 </span><span class='line'>  First name: &lt;input type="text" name="fname"&gt;&lt;br&gt;
 </span><span class='line'>  Last name: &lt;input type="text" name="lname"&gt;&lt;br&gt;
 </span><span class='line'>  &lt;input type="submit" value="Submit"&gt;
-</span><span class='line'>&lt;/form&gt;```
-</span><span class='line'>
-</span><span class='line'>post_form.erb</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>&lt;/form&gt;</span></code></pre></td></tr></table></div></figure>
 
 
-<p><form action="/post" method="post">
-  First name: <input type="text" name="fname"><br>
-  Last name: <input type="text" name="lname"><br>
-  <input type="submit" value="Submit">
-</form>&#8220;`</p>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>post_form.erb
+</span><span class='line'>&lt;form action="/post" method="post"&gt;
+</span><span class='line'>  First name: &lt;input type="text" name="fname"&gt;&lt;br&gt;
+</span><span class='line'>  Last name: &lt;input type="text" name="lname"&gt;&lt;br&gt;
+</span><span class='line'>  &lt;input type="submit" value="Submit"&gt;
+</span><span class='line'>&lt;/form&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+
 ]]></content>
   </entry>
   
