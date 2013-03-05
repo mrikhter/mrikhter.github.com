@@ -103,31 +103,30 @@
   The GET method, requests the retrieval of a resource or information.<br>
   The POST method, requests that the server accept the data enclosed as a new subordinate of the web resource. This data will typically be processed by the application.</p>
 
-<p>Ok, great. So now we&#8217;ve got a general understanding of the GET and POST methods, but now what? Where do they go and how do we use them? That&#8217;s exactly where I stood a few days ago. My problem was two-fold. First of all, I needed to understand the interaction betwee the client-server-application. Then, I needed to wrap my head around creating/sending a form to the client to fill out and then using the inputs in my application. We&#8217;ll go through one at a time.</p>
+<p>Ok, great. So now we&#8217;ve got a general understanding of the GET and POST methods, but now what? Where do they go and how do we use them? That&#8217;s exactly where I stood a few days ago. My problem was two-fold. First of all, I needed to understand the interaction betwee the client-server-application. Then, I needed to wrap my head around creating/sending a form to the client to fill out and then using the inputs in my application. We&#8217;ll go through them one at a time.</p>
 
-<p>Let&#8217;s walk through what happens in the client-server-application relationship.
+<p>Let&#8217;s walk through what happens in the client-server-application relationship.<br>
 Please note that I have used the Sinatra framework to deploy my application on my local host.</p>
 
-<p>REQUEST
-A user requests to go to the url: 0.0.0.0:9292
+<p>REQUEST<br>
+A user requests to go to the url: 0.0.0.0:9292<br>
 The browser sends an HTTP request to 0.0.0.0:9292: GET / HTTP/1.1</p>
 
-<p>This indicates:
-1) The GET method indicates that the server is supposed to return a resource.
-2) The requested URI of &#8216;/&#8217;, which is the root
+<p>This indicates:<br>
+1) The GET method indicates that the server is supposed to return a resource.<br>
+2) The requested URI of &#8216;/&#8217;, which is the root<br>
 3) The HTTP protocol version (irrelevant for us here)</p>
 
-<p>PROCESS REQUEST:
-The server looks at our controller.rb file for instructions.
+<p>PROCESS REQUEST:<br>
+The server looks at our controller.rb file for instructions.<br>
 Searches for a get method which matches the specific url and executes the proceeding code, in our case it renders the form erb file.</p>
 
-<p>RESPONSE:
-The server responds with
-200 1709 0.0539????</p>
+<p>RESPONSE:<br>
+The server responds with: 200 1709 0.0539????</p>
 
-<p>This indicates:
-1) A three-digit numeric status code. 200 means OK. Check out other <a href="https://developer.mozilla.org/en-US/docs/HTTP/HTTP_response_codes">response codes</a>.
-2) ?
+<p>This indicates:<br>
+1) A three-digit numeric status code. 200 means OK. Check out other <a href="https://developer.mozilla.org/en-US/docs/HTTP/HTTP_response_codes">response codes</a>.<br>
+2) ?<br>
 3) Request processing time</p>
 
 <p> Well in order for the server to interact with the application and respond to the client, we need to specify the</p>
