@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-03-14T17:00:18-04:00</updated>
+  <updated>2013-03-14T17:02:15-04:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -105,7 +105,7 @@ IMAGE</p>
 
 
 <p>So easy right?!<br>
-There are a slew of other features you can implement, check them out in the documenation here: http://sublimetext.info/docs/en/extensibility/snippets.html</p>
+There are a slew of other features you can implement, check them out in the <a href="http://sublimetext.info/docs/en/extensibility/snippets.html">documenation</a>.</p>
 
 <p>Happy coding!</p>
 ]]></content>
