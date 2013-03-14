@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-03-14T17:30:07-04:00</updated>
+  <updated>2013-03-14T17:31:47-04:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -73,7 +73,7 @@ You will be provided with a snippet skeleton, which details the code necessary t
 <p><img src="http://mrikhter.github.com/images/snippet4.png"><br>
 <img src="http://mrikhter.github.com/images/snippet5.png"><br></p>
 
-<p>Within the optional tabTrigger tags, set the shortcut. For example, I want to be able to type er, press the tab key to render my erb tags. If you don&#8217;t specify the shortcut, you&#8217;ll only be able to use the snippet by searching for it through the snippet menu, I can&#8217;t imagine why anyone would want to do that so I suggest considering this a requirement.</p>
+<p>Within the optional tabTrigger tags, set the shortcut. For example, I want to be able to type er, press the tab key to render my erb tags. If you don&#8217;t specify the shortcut, you&#8217;ll only be able to use the snippet by searching for it through the snippet menu. I can&#8217;t imagine why anyone would want to do that so I suggest considering this a requirement.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>&lt;tabTrigger&gt;er&lt;/tabTrigger&gt;</span></code></pre></td></tr></table></div></figure>
@@ -125,7 +125,7 @@ Note that this snippet will only show up in the menu when the search is conducte
 
 
 <p>So easy right?!<br>
-There are a slew of other features you can implement, check them out in the <a href="http://sublimetext.info/docs/en/extensibility/snippets.html">documenation</a>.</p>
+There are a slew of other features you can implement, check them out in the <a href="http://sublimetext.info/docs/en/extensibility/snippets.html">documentation</a>.</p>
 
 <p>Now we need to save the file. The extension is the key here, it must be &#8216;.sublime-snippet&#8217;. The directory will default to User within the Packages directory. You can move it into a language specific directory if you wish, but it&#8217;s not necessary.</p>
 
