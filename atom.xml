@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-03-14T17:08:20-04:00</updated>
+  <updated>2013-03-14T17:19:24-04:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -84,9 +84,10 @@ You will be provided with a snippet skeleton, which details the code necessary t
 
 <p>After ample googling, I have concluded there is not an offical list of scopes. I figured out that I needed to use text.html.ruby by looking at another Rails snippet. If you get stuck trying to figure out the scope of the files you want this shortcut to function in, don&#8217;t fret. Firstly, remember that it&#8217;s optional. You can also google around and likely find your answer anyway. Here&#8217;s a work-in-progress <a href="https://gist.github.com/iambibhas/4705378">list</a> I found during my search.</p>
 
-<p>The last and also optional input in the skeleton is a description. Here you can specify the text in the Snippets menu. I&#8217;ve made mine ERB tags. Now when I open the Snippets menu from Tools, I can search for ERB tags which will also generate the content I previously defined. If the description is not defined, it will default to the name of the file.
+<p>The last and also optional input in the skeleton is a description. Here you can specify the text in the Snippets menu. I&#8217;ve made mine ERB tags. Now when I open the Snippets menu from Tools, I can search for ERB tags which will identify the shortcut and also generate the text if I click on it. If the description is not defined, it will default to the name of the file.
 <description>ERB tags</description>
-IMAGE</p>
+<img src="http://mrikhter.github.com/images/snippet3.png"><br>
+Note that this snippet will only show up in the menu when the search is conducted in files which support it, in our case html.erb files.</p>
 
 <p>Here is the erb tag snippet in its totality:</p>
 
@@ -104,8 +105,26 @@ IMAGE</p>
 </span><span class='line'>&lt;/snippet&gt;</span></code></pre></td></tr></table></div></figure>
 
 
+<p>And here&#8217;s another snippet that I created for erb output:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;snippet&gt;
+</span><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;%= $0 %&gt;]]&gt;&lt;/content&gt;
+</span><span class='line'>&lt;tabTrigger&gt;erb&lt;/tabTrigger&gt;
+</span><span class='line'>&lt;scope&gt;text.html.ruby&lt;/scope&gt;
+</span><span class='line'>&lt;description&gt;ERB Output&lt;/description&gt;
+</span><span class='line'>&lt;/snippet&gt;</span></code></pre></td></tr></table></div></figure>
+
+
 <p>So easy right?!<br>
 There are a slew of other features you can implement, check them out in the <a href="http://sublimetext.info/docs/en/extensibility/snippets.html">documenation</a>.</p>
+
+<p>Now we need to save the file. The extension is the key here, it must be &#8216;.sublime-snippet&#8217;. The directory will default to Users. You can move it into a language specific folder if you wish, but it&#8217;s not necessary.</p>
 
 <p>Happy coding!</p>
 ]]></content>
