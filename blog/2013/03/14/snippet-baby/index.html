@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Snippet Baby, Snippet Right - Blasha</title>
+  <meta name="author" content="Masha Rikhter">
+
+  
+  <meta name="description" content="If you&#8217;re anything like me, you&#8217;re constantly looking for a more efficient way to do things. One time suck that I encountered working in &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mrikhter.github.com/blog/2013/03/14/snippet-baby/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Blasha" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Blasha</a></h1>
+  
+    <h2>A blog...by masha.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mrikhter.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Snippet Baby, Snippet Right</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-14T16:57:00-04:00" pubdate data-updated="true">Mar 14<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>If you&#8217;re anything like me, you&#8217;re constantly looking for a more efficient way to do things. One time suck that I encountered working in Rails is typing out erb tags in view files. I can&#8217;t imagine a more annoying set of characters to type in order to write Ruby in HTML and we use them ALL THE TIME. So I set out on a mission to simplify this task in my chosen text editor, Sublime. I came across Snippets, the handy dandy tool which would prove to make my, and soon your, coding life a smidge easier.</p>
+
+<p>Snippets are XML templates used for creating text shortcuts. Sublime comes with a package of built-in snippets. For example, have you ever noticed that when you type def within a ruby file and hit tab you are provided with a method-name and an end? The method-name is automatically highlighted, positioning the user to overwrite it with their chosen method name. If you hit tab again, the cursor magically moves you to the next line positioning you to define the functionality of your method. This isn&#8217;t magic, it&#8217;s a snippet!</p>
+
+<p>Well now we can all create our own magic. We&#8217;ll use those pesky erb tags as our example. To create a new snippet, go to the Sublime toolbar and open the Tools. Click on &#8220;New Snippet&#8221;.
+<img src="/images/snippet.png"><br>
+You will be provided with a snippet skeleton, which details the code necessary to make it work.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;snippet&gt;
+</span><span class='line'>  &lt;content&gt;&lt;![CDATA[
+</span><span class='line'>Hello, ${1:this} is a ${2:snippet}.
+</span><span class='line'>]]&gt;&lt;/content&gt;
+</span><span class='line'>  &lt;!-- Optional: Set a tabTrigger to define how to trigger the snippet --&gt;
+</span><span class='line'>  &lt;!-- &lt;tabTrigger&gt;hello&lt;/tabTrigger&gt; --&gt;
+</span><span class='line'>  &lt;!-- Optional: Set a scope to limit where the snippet will trigger --&gt;
+</span><span class='line'>  &lt;!-- &lt;scope&gt;source.python&lt;/scope&gt; --&gt;
+</span><span class='line'>&lt;/snippet&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Within the content tags in the square brackets after CDATA, define the desired output.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;% %&gt;]]&gt;&lt;/content&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can specify the desired cursor location after keying tab.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;% $1 %&gt;]]&gt;&lt;/content&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Or even a sequence of movements!</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;% $2 %&gt; $1]]&gt;&lt;/content&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In this case, after typing er and pressing tab, the cursor will move to the $1 location. When you press tab again, the cursor will move to the location at $2. You can further define place holders for those locations.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;% ${2:second stop} %&gt; ${1:first stop}]]&gt;&lt;/content&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Within the optional tabTrigger tags, set the shortcut. For example, I want to be able to type er, press the tab key to render my erb tags.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;tabTrigger&gt;er&lt;/tabTrigger&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The optional scope tags specify the type of files in which this snippet will be accessible. I want to use erb tags in Rails views so I have specified text.html.ruby.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scope&gt;text.html.ruby&lt;/scope&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After ample googling, I have concluded there is not an offical list of scopes. I figured out that I needed to use text.html.ruby by looking at another Rails snippet. If you get stuck trying to figure out the scope of the files you want this shortcut to function in, don&#8217;t fret. Firstly, remember that it&#8217;s optional. You can also google around and likely find your answer anyway. Here&#8217;s a work-in-progress <a href="https://gist.github.com/iambibhas/4705378">list</a> I found during my search.</p>
+
+<p>The last and also optional input in the skeleton is a description. Here you can specify the text in the Snippets menu. I&#8217;ve made mine ERB tags. Now when I open the Snippets menu from Tools, I can search for ERB tags which will also generate the content I previously defined. If the description is not defined, it will default to the name of the file.
+<description>ERB tags</description>
+IMAGE</p>
+
+<p>Here is the erb tag snippet in its totality:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;snippet&gt;
+</span><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;% $0 %&gt;]]&gt;&lt;/content&gt;
+</span><span class='line'>&lt;tabTrigger&gt;er&lt;/tabTrigger&gt;
+</span><span class='line'>&lt;scope&gt;text.html.ruby&lt;/scope&gt;
+</span><span class='line'>&lt;description&gt;ERB tags&lt;/description&gt;
+</span><span class='line'>&lt;/snippet&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So easy right?!<br>
+There are a slew of other features you can implement, check them out in the documenation here: http://sublimetext.info/docs/en/extensibility/snippets.html</p>
+
+<p>Happy coding!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Masha Rikhter</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-14T16:57:00-04:00" pubdate data-updated="true">Mar 14<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mrikhter.github.com/blog/2013/03/14/snippet-baby/" data-via="" data-counturl="http://mrikhter.github.com/blog/2013/03/14/snippet-baby/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/03/04/get/" title="Previous Post: Get, Post, Repeat">&laquo; Get, Post, Repeat</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/03/14/snippet-baby/">Snippet Baby, Snippet Right</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/04/get/">Get, Post, Repeat</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/17/basic-github-how-to/">GitHub: Basic How-to's</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/12/top-4-motivations-for-taking-the-leap-to-code/">Top 4 Motivations for Taking the Leap to Code</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/06/hello/">Hello</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Masha Rikhter -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

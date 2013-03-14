@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-03-11T08:47:59-04:00</updated>
+  <updated>2013-03-14T17:00:18-04:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -12,6 +12,104 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Snippet Baby, Snippet Right]]></title>
+    <link href="http://mrikhter.github.com/blog/2013/03/14/snippet-baby/"/>
+    <updated>2013-03-14T16:57:00-04:00</updated>
+    <id>http://mrikhter.github.com/blog/2013/03/14/snippet-baby</id>
+    <content type="html"><![CDATA[<p>If you&#8217;re anything like me, you&#8217;re constantly looking for a more efficient way to do things. One time suck that I encountered working in Rails is typing out erb tags in view files. I can&#8217;t imagine a more annoying set of characters to type in order to write Ruby in HTML and we use them ALL THE TIME. So I set out on a mission to simplify this task in my chosen text editor, Sublime. I came across Snippets, the handy dandy tool which would prove to make my, and soon your, coding life a smidge easier.</p>
+
+<p>Snippets are XML templates used for creating text shortcuts. Sublime comes with a package of built-in snippets. For example, have you ever noticed that when you type def within a ruby file and hit tab you are provided with a method-name and an end? The method-name is automatically highlighted, positioning the user to overwrite it with their chosen method name. If you hit tab again, the cursor magically moves you to the next line positioning you to define the functionality of your method. This isn&#8217;t magic, it&#8217;s a snippet!</p>
+
+<p>Well now we can all create our own magic. We&#8217;ll use those pesky erb tags as our example. To create a new snippet, go to the Sublime toolbar and open the Tools. Click on &#8220;New Snippet&#8221;.
+<img src="http://mrikhter.github.com/images/snippet.png"><br>
+You will be provided with a snippet skeleton, which details the code necessary to make it work.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;snippet&gt;
+</span><span class='line'>  &lt;content&gt;&lt;![CDATA[
+</span><span class='line'>Hello, ${1:this} is a ${2:snippet}.
+</span><span class='line'>]]&gt;&lt;/content&gt;
+</span><span class='line'>  &lt;!-- Optional: Set a tabTrigger to define how to trigger the snippet --&gt;
+</span><span class='line'>  &lt;!-- &lt;tabTrigger&gt;hello&lt;/tabTrigger&gt; --&gt;
+</span><span class='line'>  &lt;!-- Optional: Set a scope to limit where the snippet will trigger --&gt;
+</span><span class='line'>  &lt;!-- &lt;scope&gt;source.python&lt;/scope&gt; --&gt;
+</span><span class='line'>&lt;/snippet&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Within the content tags in the square brackets after CDATA, define the desired output.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;% %&gt;]]&gt;&lt;/content&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can specify the desired cursor location after keying tab.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;% $1 %&gt;]]&gt;&lt;/content&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Or even a sequence of movements!</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;% $2 %&gt; $1]]&gt;&lt;/content&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In this case, after typing er and pressing tab, the cursor will move to the $1 location. When you press tab again, the cursor will move to the location at $2. You can further define place holders for those locations.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;% ${2:second stop} %&gt; ${1:first stop}]]&gt;&lt;/content&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Within the optional tabTrigger tags, set the shortcut. For example, I want to be able to type er, press the tab key to render my erb tags.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;tabTrigger&gt;er&lt;/tabTrigger&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The optional scope tags specify the type of files in which this snippet will be accessible. I want to use erb tags in Rails views so I have specified text.html.ruby.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scope&gt;text.html.ruby&lt;/scope&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After ample googling, I have concluded there is not an offical list of scopes. I figured out that I needed to use text.html.ruby by looking at another Rails snippet. If you get stuck trying to figure out the scope of the files you want this shortcut to function in, don&#8217;t fret. Firstly, remember that it&#8217;s optional. You can also google around and likely find your answer anyway. Here&#8217;s a work-in-progress <a href="https://gist.github.com/iambibhas/4705378">list</a> I found during my search.</p>
+
+<p>The last and also optional input in the skeleton is a description. Here you can specify the text in the Snippets menu. I&#8217;ve made mine ERB tags. Now when I open the Snippets menu from Tools, I can search for ERB tags which will also generate the content I previously defined. If the description is not defined, it will default to the name of the file.
+<description>ERB tags</description>
+IMAGE</p>
+
+<p>Here is the erb tag snippet in its totality:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;snippet&gt;
+</span><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;% $0 %&gt;]]&gt;&lt;/content&gt;
+</span><span class='line'>&lt;tabTrigger&gt;er&lt;/tabTrigger&gt;
+</span><span class='line'>&lt;scope&gt;text.html.ruby&lt;/scope&gt;
+</span><span class='line'>&lt;description&gt;ERB tags&lt;/description&gt;
+</span><span class='line'>&lt;/snippet&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So easy right?!<br>
+There are a slew of other features you can implement, check them out in the documenation here: http://sublimetext.info/docs/en/extensibility/snippets.html</p>
+
+<p>Happy coding!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Get, Post, Repeat]]></title>
