@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-03-17T23:24:51-04:00</updated>
+  <updated>2013-03-17T23:38:59-04:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -55,7 +55,7 @@ You will be provided with a snippet skeleton, which details the code necessary t
 <p>You can specify the desired cursor location after keying tab.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;% $1 %&gt;]]&gt;&lt;/content&gt;</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;% $0 %&gt;]]&gt;&lt;/content&gt;</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Or even a sequence of movements!</p>
@@ -64,7 +64,9 @@ You will be provided with a snippet skeleton, which details the code necessary t
 </pre></td><td class='code'><pre><code class=''><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;% $2 %&gt; $1]]&gt;&lt;/content&gt;</span></code></pre></td></tr></table></div></figure>
 
 
-<p>In this case, after typing er (this step is explained next) and pressing tab, the cursor will move to the $1 location. When you press tab again, the cursor will move to the location at $2. You can further define place holders for those locations.</p>
+<p>In this case, after typing er (this step is explained next) and pressing tab, the cursor will move to the $1 location. When you press tab again, the cursor will move to the location at $2. Note that I didn&#8217;t use $0 as the starting point as I had in the previous example. That is because $0 specifies the exit point, so it would actually be evaluated last in the sequence of movements. If I replaced $2 with $0 above, the cursor would follow the same sequence.</p>
+
+<p>You can further define place holders for those locations.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>&lt;content&gt;&lt;![CDATA[&lt;% ${2:second stop} %&gt; ${1:first stop}]]&gt;&lt;/content&gt;</span></code></pre></td></tr></table></div></figure>
