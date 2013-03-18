@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-03-17T22:24:08-04:00</updated>
+  <updated>2013-03-17T23:24:51-04:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -128,7 +128,7 @@ Note that this snippet will only show up in the menu when the search is conducte
 </span><span class='line'>&lt;/snippet&gt;</span></code></pre></td></tr></table></div></figure>
 
 
-<p>There are a slew of other features you can implement, check them out in the <a href="http://sublimetext.info/docs/en/extensibility/snippets.html">documentation</a>.</p>
+<p>Check out the <a href="http://sublimetext.info/docs/en/extensibility/snippets.html">documentation</a> for other available features.</p>
 
 <p>Now we need to save the file. The extension is key here, it must be &#8216;.sublime-snippet&#8217;. The default directory is User within the Packages directory. You can move it into a language specific directory if you wish, but it&#8217;s not necessary. So easy right?!</p>
 
