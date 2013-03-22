@@ -9,7 +9,7 @@
   <meta name="author" content="Masha Rikhter">
 
   
-  <meta name="description" content="If you&#8217;re anything like me, you&#8217;re constantly looking for a more efficient way to do things. One time-suck that I encountered working in &hellip;">
+  <meta name="description" content="The mechanize library sits on top of the Nokogiri library, adding additional functionality for interacting with a website through an app. Our team &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,377 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/03/21/mechanize-d/">Mechanize-d</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-21T18:26:00-04:00" pubdate data-updated="true">Mar 21<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The mechanize library sits on top of the Nokogiri library, adding additional functionality for interacting with a website through an app. Our team used mechanize in order to scrape the number of badges a student earned on team treehouse for our project. Mechanize is used in cases where you need to interact with forms and links.</p>
+
+<h3>Using Mechanize</h3>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>require 'mechanize'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>instantiate a mechanize object:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>agent = Mechanize.new</span></code></pre></td></tr></table></div></figure>
+
+
+<p>fetch a page:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>page = agent.get("http://www.teamtreehouse.com/login")</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mechanize returns all of the page data including links and forms</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#&lt;Mechanize::Page
+</span><span class='line'> {url #&lt;URI::HTTPS:0x007fec31b944a0 URL:https://teamtreehouse.com/login&gt;}
+</span><span class='line'> {meta_refresh}
+</span><span class='line'> {title "Sign In"}
+</span><span class='line'> {iframes}
+</span><span class='line'> {frames}
+</span><span class='line'> {links
+</span><span class='line'>  #&lt;Mechanize::Page::Link "\n          \n" "https://teamtreehouse.com/"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "\n        Library\n"
+</span><span class='line'>   "https://teamtreehouse.com/library"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "\n        Forum\n" "/forum"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "\n        Plans & Pricing\n"
+</span><span class='line'>   "https://teamtreehouse.com/subscribe/plans"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "\n          Help"
+</span><span class='line'>   "https://teamtreehouse.com/contact"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Search" nil&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "I forgot my password" "/password_resets"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Our Company →" "/about"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "About" "/about"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Forum" "/forum"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Stories" "/stories"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Blog" "http://blog.teamtreehouse.com"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "Affiliate Program"
+</span><span class='line'>   "http://blog.teamtreehouse.com/treehouse-affiliate-program"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Treehouse Shop" "http://shop.teamtreehouse.com"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Jobs" "/jobs"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Privacy Policy" "/privacy"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Terms & Conditions" "/terms"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Browse full library →" "/library"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Websites" "/library/websites"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Programming" "/library/programming"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Business" "/library/business"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "iOS Development" "/library/ios-development"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Android Development" "/library/android-development"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "WordPress"
+</span><span class='line'>   "/library/websites/how-to-make-a-wordpress-blog"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Learning Adventures" "/learning-adventures"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Bonus Content" "/library/bonus-content"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "Learning Adventures →"
+</span><span class='line'>   "/library#learning-adventures"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "Become a Web Designer"
+</span><span class='line'>   "/learning-adventures/become-a-web-designer"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "Become a Web Developer"
+</span><span class='line'>   "/learning-adventures/become-a-web-developer"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "Learn HTML and CSS"
+</span><span class='line'>   "/learning-adventures/learn-html-and-css"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "Start a Business"
+</span><span class='line'>   "/learning-adventures/start-a-business"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "Learn Ruby on Rails"
+</span><span class='line'>   "/learning-adventures/learn-ruby-on-rails"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "Learn to Build iPhone Apps"
+</span><span class='line'>   "/learning-adventures/learn-to-build-iphone-apps"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "Learn to Build Android Apps"
+</span><span class='line'>   "/learning-adventures/learn-to-build-android-apps"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "Become a Mobile Developer"
+</span><span class='line'>   "/learning-adventures/become-a-mobile-developer"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Email us" "/contact"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "\n            \n            Twitter\n          "
+</span><span class='line'>   "http://twitter.com/treehouse"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "\n            \n            Youtube\n          "
+</span><span class='line'>   "http://youtube.com/user/gotreehouse"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "\n            \n            Twitter\n          "
+</span><span class='line'>   "http://facebook.com/teamtreehouse"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "\n            \n            Google Plus\n          "
+</span><span class='line'>   "http://plus.google.com/110278003536476194286/posts"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "\n            \n            Linked\n          "
+</span><span class='line'>   "http://linkedin.com/company/treehouse-island-inc-"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "" "#"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link
+</span><span class='line'>   "help@teamtreehouse.com"
+</span><span class='line'>   "mailto:help@teamtreehouse.com"&gt;
+</span><span class='line'>  #&lt;Mechanize::Page::Link "Forum" "/forum"&gt;}
+</span><span class='line'> {forms
+</span><span class='line'>  #&lt;Mechanize::Form
+</span><span class='line'>   {name nil}
+</span><span class='line'>   {method "GET"}
+</span><span class='line'>   {action "/library/search"}
+</span><span class='line'>   {fields [text:0x3ff6194a1394 type: text name: q value: ]}
+</span><span class='line'>   {radiobuttons}
+</span><span class='line'>   {checkboxes}
+</span><span class='line'>   {file_uploads}
+</span><span class='line'>   {buttons [button:0x3ff6194a2708 type:  name: search value: ]}&gt;
+</span><span class='line'>  #&lt;Mechanize::Form
+</span><span class='line'>   {name nil}
+</span><span class='line'>   {method "POST"}
+</span><span class='line'>   {action "https://teamtreehouse.com/person_session"}
+</span><span class='line'>   {fields
+</span><span class='line'>    [hidden:0x3ff6194a4e40 type: hidden name: utf8 value: ✓]
+</span><span class='line'>    [hidden:0x3ff6194a4990 type: hidden name: authenticity_token value: jn2fqPxlHgEpz2UDt70qONf0cKp67zQ6huGugPsfKHA=]
+</span><span class='line'>    [field:0x3ff6194a438c type: email name: user_session[email] value: ]
+</span><span class='line'>    [field:0x3ff6194a7ce4 type: password name: user_session[password] value: ]}
+</span><span class='line'>   {radiobuttons}
+</span><span class='line'>   {checkboxes}
+</span><span class='line'>   {file_uploads}
+</span><span class='line'>   {buttons [button:0x3ff6194a9f80 type: submit name:  value: ]}&gt;
+</span><span class='line'>  #&lt;Mechanize::Form
+</span><span class='line'>   {name nil}
+</span><span class='line'>   {method "POST"}
+</span><span class='line'>   {action "/contact"}
+</span><span class='line'>   {fields
+</span><span class='line'>    [hidden:0x3ff6194abe98 type: hidden name: utf8 value: ✓]
+</span><span class='line'>    [hidden:0x3ff6194ab678 type: hidden name: authenticity_token value: hrJlRQyZuuW423dPn4VYW+IgKhZrWqdbFvTC43WmG2U=]
+</span><span class='line'>    [text:0x3ff6194ab3bc type: text name: contact_form[name] value: ]
+</span><span class='line'>    [text:0x3ff6194ab100 type: text name: contact_form[email] value: ]
+</span><span class='line'>    [text:0x3ff6194aaebc type: text name: contact_form[email_confirmation] value: ]
+</span><span class='line'>    [text:0x3ff6194aac00 type: text name: contact_form[phone_number] value: ]
+</span><span class='line'>    [textarea:0x3ff6194ae10c type:  name: contact_form[message] value: ]}
+</span><span class='line'>   {radiobuttons}
+</span><span class='line'>   {checkboxes}
+</span><span class='line'>   {file_uploads}
+</span><span class='line'>   {buttons}&gt;}&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Lets take a look at the sign-in form:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>form = agent.page.forms[1]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This returns the second form object:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#&lt;Mechanize::Form
+</span><span class='line'> {name nil}
+</span><span class='line'> {method "POST"}
+</span><span class='line'> {action "https://teamtreehouse.com/person_session"}
+</span><span class='line'> {fields
+</span><span class='line'>  [hidden:0x3ff6194a4e40 type: hidden name: utf8 value: ✓]
+</span><span class='line'>  [hidden:0x3ff6194a4990 type: hidden name: authenticity_token value: jn2fqPxlHgEpz2UDt70qONf0cKp67zQ6huGugPsfKHA=]
+</span><span class='line'>  [field:0x3ff6194a438c type: email name: user_session[email] value: ]
+</span><span class='line'>  [field:0x3ff6194a7ce4 type: password name: user_session[password] value: ]}
+</span><span class='line'> {radiobuttons}
+</span><span class='line'> {checkboxes}
+</span><span class='line'> {file_uploads}
+</span><span class='line'> {buttons [button:0x3ff6194a9f80 type: submit name:  value: ]}&gt;
+</span><span class='line'> ```
+</span><span class='line'>
+</span><span class='line'> Mechanize actually allows you to fill in the form and press the submit button to log-in:
+</span><span class='line'> ```
+</span><span class='line'>form.fields[2].value = "login info"
+</span><span class='line'>form.fields[3].value = "password"
+</span><span class='line'>form.submit</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now we&#8217;re in, and can begin scraping the site using Nokogiri!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -628,6 +999,10 @@ Seriously, writing code is like solving a super complicated puzzle. Sure it&#821
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/03/21/mechanize-d/">Mechanize-d</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/03/14/snippet-baby/">Snippet Baby, Snippet Right</a>
       </li>
     
@@ -641,10 +1016,6 @@ Seriously, writing code is like solving a super complicated puzzle. Sure it&#821
     
       <li class="post">
         <a href="/blog/2013/02/12/top-4-motivations-for-taking-the-leap-to-code/">Top 4 Motivations for Taking the Leap to Code</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/02/06/hello/">Hello</a>
       </li>
     
   </ul>
