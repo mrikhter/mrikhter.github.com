@@ -4,7 +4,7 @@
   <title><![CDATA[Blasha]]></title>
   <link href="http://mrikhter.github.com/atom.xml" rel="self"/>
   <link href="http://mrikhter.github.com/"/>
-  <updated>2013-03-22T08:59:13-04:00</updated>
+  <updated>2013-03-22T09:06:49-04:00</updated>
   <id>http://mrikhter.github.com/</id>
   <author>
     <name><![CDATA[Masha Rikhter]]></name>
@@ -356,6 +356,14 @@
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>agent.page.link_with(:text =&gt; "About").click</span></code></pre></td></tr></table></div></figure>
 
+
+<p>If there was more than one link with the text &#8220;About&#8221;, you could use the plural form of link and obtain a list of links, then choosing which one you want:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>agent.page.links_with(:text =&gt; "About")[0].click</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There are is a plethora of other ways to use mechanize in interacting with websites, the <a href="http://mechanize.rubyforge.org/">documentation</a> is pretty robust and clear, check it out!</p>
 ]]></content>
   </entry>
   
